@@ -1,0 +1,58 @@
+---
+title: "Peer-reviewed Publications"
+---
+```{python}
+#| echo: false
+#| output: asis
+
+from bibtexparser import parse_file
+
+library = parse_file("my_pubs.bib")
+
+peer_reviewed = [
+    e for e in library.entries
+    if "peer-reviewed" in e["keywords"]
+]
+
+peer_reviewed.sort(
+    key=lambda e: int(e["year"]),
+    reverse=True
+)
+
+for entry in peer_reviewed:
+
+    title = (
+        entry["title"]
+        .replace("{", "")
+        .replace("}", "")
+        .replace("\\textsc", "")
+    )
+
+    authors = (
+        entry["author"]
+        .replace(" and ", ", ")
+        .replace("{", "")
+        .replace("}", "")
+    )
+
+    venue = ""
+
+    if "journal" in entry:
+        venue = entry["journal"]
+    elif "booktitle" in entry:
+        venue = entry["booktitle"]
+
+    year = entry["year"] if "year" in entry else ""
+    doi = entry["doi"] if "doi" in entry else ""
+
+    print(f"**{title}**  ")
+    print(f"{authors}  ")
+
+    if venue:
+        print(f"*{venue}* ({year})  ")
+
+    if doi:
+        print(f"<https://doi.org/{doi}>")
+
+    print()
+```

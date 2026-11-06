@@ -1,0 +1,69 @@
+---
+title: "Other Publications"
+---
+```{python}
+#| echo: false
+#| output: asis
+
+from bibtexparser import parse_file
+
+library = parse_file("my_pubs.bib")
+
+public_engagement = [
+    e for e in library.entries
+    if "public engagement" in e["keywords"]
+]
+
+public_engagement.sort(
+    key=lambda e: int(e["year"]) if "year" in e else 0,
+    reverse=True
+)
+
+for entry in public_engagement:
+
+    title = (
+        entry["title"]
+        .replace("{", "")
+        .replace("}", "")
+        .replace("\\textsc", "")
+        .replace("\\_", "_")
+    )
+
+    authors = (
+        entry["author"]
+        .replace(" and ", ", ")
+        .replace("{", "")
+        .replace("}", "")
+    )
+
+    authors = (
+        authors
+        .replace("Burton, Victoria J.", "**Burton, Victoria J.**")
+        .replace("Burton, Victoria", "**Burton, Victoria**")
+    )
+
+    if "journal" in entry:
+        venue = entry["journal"]
+    elif "booktitle" in entry:
+        venue = entry["booktitle"]
+    elif "publisher" in entry:
+        venue = entry["publisher"]
+    else:
+        venue = ""
+
+    year = entry["year"] if "year" in entry else ""
+    doi = entry["doi"] if "doi" in entry else ""
+
+    print(f"**{title}**  ")
+    print(f"{authors}  ")
+
+    if venue:
+        print(f"*{venue}* ({year})  ")
+    elif year:
+        print(f"{year}  ")
+
+    if doi:
+        print(f"<https://doi.org/{doi}>")
+
+    print()
+```

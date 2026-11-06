@@ -1,0 +1,16 @@
+
+# Quarto cache
+.quarto/
+**/*.quarto_ipynb
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+*.venv
+
+/.quarto/

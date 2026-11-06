@@ -1,0 +1,28 @@
+website:
+  title: "Dr Victoria J. Burton"
+
+  navbar:
+    left:
+      - text: About
+        href: index.qmd
+
+      - text: Publications
+        menu:
+          - text: Peer-reviewed
+            href: peer-reviewed.qmd
+
+          - text: Public Engagement
+            href: public-engagement.qmd
+
+      - text: Contact
+        href: contact.qmd
+
+    right:
+      - icon: butterfly
+        href: https://bsky.app/profile/soilscholar.bsky.social
+
+      - icon: mortarboard
+        href: https://www.researchgate.net/profile/Victoria-Burton-5
+
+      - text: briefcase
+        href: https://uk.linkedin.com/in/victoriajburton
