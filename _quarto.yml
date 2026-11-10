@@ -21,11 +21,11 @@ website:
         href: contact.qmd
 
     right:
-      - icon: butterfly
+      - icon: images/bluesky.svg
         href: https://bsky.app/profile/soilscholar.bsky.social
 
       - icon: mortarboard
         href: https://www.researchgate.net/profile/Victoria-Burton-5
 
-      - text: briefcase
+      - text: linkedin
         href: https://uk.linkedin.com/in/victoriajburton
