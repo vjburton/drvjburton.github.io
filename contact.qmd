@@ -1,7 +1,7 @@
 ## Connect with me
 
-- {{< fa globe >}} [Institutional webpage](https://www.nhm.ac.uk/our-science/people/victoria-burton.html)
-- {{< fa brands orcid >}} [ORCID](https://orcid.org/0000-0003-0122-3292)
-- {{< fa graduation-cap >}} [ResearchGate](https://www.researchgate.net/profile/Victoria-Burton-5)
+- 🌐 [Institutional webpage](https://www.nhm.ac.uk/our-science/people/victoria-burton.html)
+- 🆔 [ORCID](https://orcid.org/0000-0003-0122-3292)
+- 🎓 [ResearchGate](https://www.researchgate.net/profile/Victoria-Burton-5)
 - ![](images/bluesky.svg){width=16px} [Bluesky](https://bsky.app/profile/soilscholar.bsky.social)
-- {{< fa brands linkedin >}} [LinkedIn](https://uk.linkedin.com/in/victoriajburton)
+- 💼 [LinkedIn](https://uk.linkedin.com/in/victoriajburton)
