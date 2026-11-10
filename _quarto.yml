@@ -1,3 +1,6 @@
+project:
+  type: website
+
 website:
   title: "Dr Victoria J. Burton"
 
